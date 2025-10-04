@@ -1,0 +1,1714 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examens | Med Education</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+    
+  <nav>
+    <img src="img/logo16.jpg" alt="Logo Med Education" width="150" height="50">
+    <div class="navigation">
+        <button class="menu-toggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li class="menu-close-item">
+                <button class="menu-close" aria-label="Fermer le menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="courses.html">Cours</a></li>
+            <li><a href="exmens.html" class="active">Examens</a></li>
+            <li><a href="qcm.html">QCM</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html" class="btn-login">Connexion</a></li>
+            <li><a href="register.html" class="btn-register">Inscription</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Banner Section -->
+    <section class="exam-banner">
+        <div class="container">
+            <h1>Banque d'Examens</h1>
+            <p>Accédez à des centaines d'examens classés par spécialité et par année d'études</p>
+        </div>
+    </section>
+
+    <!-- Specialties Tabs -->
+    <section class="specialties-tabs">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="medecine-exams">Médecine (6 ans)</button>
+                <button class="tab-btn" data-tab="dentaire-exams">Chirurgie Dentaire (5 ans)</button>
+                <button class="tab-btn" data-tab="pharmacie-exams">Pharmacie (5 ans)</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medicine Exams Content -->
+    <section id="medecine-exams" class="specialty-content active-tab">
+        <div class="container">
+            <h2 class="specialty-title">Examens de Médecine</h2>
+            <p class="specialty-description">Banque d'examens pour les 6 années d'études médicales</p>
+            
+            <div class="years-accordion">
+                <!-- Year 1 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Première Année (PACES)</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="module-actions" style="margin-bottom: 20px; text-align: center;">
+                            <a href="#" class="download-btn" onclick="downloadExams('MED_YEAR1'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #4285f4, #34a853); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.3s;">
+                                <i class="fab fa-google-drive"></i> Télécharger Tous les Examens - 1ère Année
+                            </a>
+                        </div>
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>📚 Modules de 1ère Année</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>• Cytologie</li>
+                                    <li>• Physiologie humaine</li>
+                                    <li>• Histologie</li>
+                                    <li>• Embryologie</li>
+                                    <li>• Anatomie générale</li>
+                                    <li>• Chimie générale et organique</li>
+                                    <li>• Biochimie structurale</li>
+                                    <li>• Biophysique</li>
+                                    <li>• Biostatistique et Informatique</li>
+                                    <li>• Santé, société, humanité</li>
+                                    <li>• Français</li>
+                                    <li>• Secourisme</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 2 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Deuxième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>Cardio-respiratoire et organes hématopoïétiques</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>QCM Séance 5</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Session Rattrapage 2022</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="module-card">
+                                <h4>Digestif</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Partiel</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Urinaire</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Endocrino-Génital</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Pratique</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Système nerveux et organes des sens</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Immunologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 3 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Troisième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>Psychologie médicale, sémiologie générale et appareil cardio-respiratoire</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Session Rattrapage 2022</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="module-card">
+                                <h4>Appareil neurologique, locomoteur et cutané</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>QCM Entraînement</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Appareil Endocrinien, de reproduction et urinaire</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Appareil digestif et organes hématopoïétiques</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Microbiologie médicale</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Pratique</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Pharmacologie clinique</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 4 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Quatrième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>Cardiologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Session Rattrapage 2022</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="module-card">
+                                <h4>Pneumo-phtisiologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Maladies Infectieuses</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>QCM Entraînement</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Hépato-Gastro-Entérologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Pratique</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>ONCO-Hématologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Neurologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 5 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Cinquième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>Orthopédie, Traumatologie, Rééducation</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Session Rattrapage 2022</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="module-card">
+                                <h4>Urologie-Néphrologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>QCM Entraînement</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Pédiatrie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Santé mentale</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Pratique</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Gynécologie-Obstétrique</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Endocrinologie-maladies métaboliques</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>QCM Séance 3</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 6 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Sixième Année (Externat)</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>Oto-Rhino-Laryngologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Session Rattrapage 2022</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="module-card">
+                                <h4>Médecine Légale</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Ophtalmologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>QCM Entraînement</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Dermatologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Médecine sociale</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Pratique</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Épidémiologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>QCM Séance 4</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dentaire Exams Content -->
+    <section id="dentaire-exams" class="specialty-content">
+        <div class="container">
+            <h2 class="specialty-title">Examens de Chirurgie Dentaire</h2>
+            <p class="specialty-description">Banque d'examens pour les 5 années d'études dentaires</p>
+            
+            <div class="years-accordion">
+                <!-- Year 1 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Première Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>Anatomie générale</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Session Rattrapage 2022</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="module-card">
+                                <h4>Physiologie générale</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Partiel 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Histologie/Embryologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>QCM Entraînement</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Génétique</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Biochimie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Pratique</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Microbiologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 2 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Deuxième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>Prothèse</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="module-card">
+                                <h4>Odontologie conservatrice/Endodontie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Session Rattrapage 2022</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Anatomie humaine</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Pratique</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Parodontologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>QCM Entraînement</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Microbiologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Pathologie et Chirurgie Buccales</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 3 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Troisième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>Prothèse</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="module-card">
+                                <h4>Odontologie conservatrice/Endodontie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Session Rattrapage 2022</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Pathologie et Chirurgie Buccales</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Pratique</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Parodontologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>QCM Entraînement</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Orthopédie dento faciale</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Pharmacologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 4 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Quatrième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>Prothèse</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="module-card">
+                                <h4>Odontologie conservatrice/Endodontie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Session Rattrapage 2022</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Pathologie et Chirurgie Buccales</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>QCM Entraînement</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Parodontologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Pratique</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Implantologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Odontologie Pédiatrique</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 5 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Cinquième Année (Externat)</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>Odontologie préventive et sociale</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Évaluation Stage 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                        <span>Rapport de Stage</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Préparation à l'Exercice</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>QCM Entraînement</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Parodontologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Implantologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Ergonomie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Projet Innovation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pharmacie Exams Content -->
+    <section id="pharmacie-exams" class="specialty-content">
+        <div class="container">
+            <h2 class="specialty-title">Examens de Pharmacie</h2>
+            <p class="specialty-description">Banque d'examens pour les 5 années d'études pharmaceutiques</p>
+            
+            <div class="years-accordion">
+                <!-- Year 1 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Première Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>Chimie pharmaceutique générale</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Session Rattrapage</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>QCM Entraînement</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="module-card">
+                                <h4>Biologie cellulaire</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Biologie végétale</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Pratique</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Physique pharmaceutique</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Biomathématique-Informatique-Biostatistique</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Session Rattrapage 2022</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Anatomie fonctionnelle descriptive</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 2 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Deuxième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>Chimie minérale</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Session Rattrapage 2022</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="module-card">
+                                <h4>Chimie analytique</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Microbiologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>QCM Entraînement</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Biochimie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Pratique</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Chimie Analytique</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Anatomie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 3 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Troisième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>Pharmacognosie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Session Rattrapage 2022</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="module-card">
+                                <h4>Toxicologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Biotechnologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>QCM Entraînement</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Immunologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Pratique</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Pathologie</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Économie Pharmaceutique</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 4 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Quatrième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>Pharmacie Hospitalière</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Session Rattrapage 2022</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="module-card">
+                                <h4>Pharmacovigilance</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Gestion Pharmaceutique</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>QCM Entraînement</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Législation Pharmaceutique</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Pratique</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Recherche Pharmaceutique</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Éthique Pharmaceutique</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 5 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Cinquième Année (Externat)</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>Stages Hospitaliers</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Évaluation Stage 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Rapport de Stage</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="module-card">
+                                <h4>Stages Officine</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Évaluation Stage 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Rapport de Stage</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Thèse de Doctorat</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Soutenance 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>Mémoire Final</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Pathologie et Chirurgie Buccales</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>QCM Entraînement</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Innovation Pharmaceutique</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="module-card">
+                                <h4>Santé Publique</h4>
+                                <div class="exams-list">
+                                    <a href="#" class="exam-item">
+                                        <span>Examen Final 2023</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                    <a href="#" class="exam-item">
+                                        <span>TP Évaluation</span>
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exam Tips Section -->
+    <section class="exam-tips">
+        <div class="container">
+            <h2>Conseils pour Réussir vos Examens</h2>
+            <div class="tips-grid">
+                <div class="tip-card" data-aos="fade-up">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Planification</h3>
+                    <p>Établissez un calendrier de révision réaliste couvrant tous les modules</p>
+                </div>
+                
+                <div class="tip-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Annales</h3>
+                    <p>Pratiquez avec les anciens examens pour comprendre le format et les attentes</p>
+                </div>
+                
+                <div class="tip-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-users"></i>
+                    <h3>Groupe d'Étude</h3>
+                    <p>Formez des groupes de travail pour échanger et approfondir votre compréhension</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="img/logo16.jpg" alt="Med Education" class="footer-logo">
+                <p class="footer-description">
+                    Med Education est la plateforme leader d'apprentissage en médecine, offrant des ressources pédagogiques de qualité pour les étudiants et professionnels de santé.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-title">Liens Rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+                    <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Nos Cours</a></li>
+                    <li><a href="exmens.html"><i class="fas fa-chevron-right"></i> Examens Blancs</a></li>
+                    <li><a href="about.html"><i class="fas fa-chevron-right"></i> À Propos</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    <li><a href="login.html"><i class="fas fa-chevron-right"></i> Connexion</a></li>
+                    <li><a href="register.html"><i class="fas fa-chevron-right"></i> Inscription</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-title">Nos Spécialités</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Médecine Générale</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Chirurgie Dentaire</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Pharmacie</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Pédiatrie</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Cardiologie</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-title">Contactez-nous</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Hai Sabah - Oran - Algérie</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+213  779 351 179</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>Mededucation31@gamil.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Lun-Ven: 9h-18h</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2025 Med Education. Tous droits réservés.</p>
+                <div class="legal-links">
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Download Exams Function
+        function downloadExams(code) {
+            const driveLinks = {
+                // Medicine - All Years
+                'MED_YEAR1': 'https://fmed.univ-tlemcen.dz/graduation-medecine',
+                'MED_YEAR2': 'https://fmed.univ-tlemcen.dz/graduation-medecine',
+                'MED_YEAR3': 'https://fmed.univ-tlemcen.dz/graduation-medecine',
+                'MED_YEAR4': 'https://fmed.univ-tlemcen.dz/graduation-medecine',
+                'MED_YEAR5': 'https://fmed.univ-tlemcen.dz/graduation-medecine',
+                'MED_YEAR6': 'https://fmed.univ-tlemcen.dz/graduation-medecine',
+                
+                // Dentistry - All Years
+                'DENT_YEAR1': 'https://fmed.univ-tlemcen.dz/graduation-medecine-dentaire',
+                'DENT_YEAR2': 'https://fmed.univ-tlemcen.dz/graduation-medecine-dentaire',
+                'DENT_YEAR3': 'https://fmed.univ-tlemcen.dz/graduation-medecine-dentaire',
+                'DENT_YEAR4': 'https://fmed.univ-tlemcen.dz/graduation-medecine-dentaire',
+                'DENT_YEAR5': 'https://fmed.univ-tlemcen.dz/graduation-medecine-dentaire',
+                
+                // Pharmacy - All Years
+                'PHARM_YEAR1': 'https://fmed.univ-tlemcen.dz/graduation-pharmacie',
+                'PHARM_YEAR2': 'https://fmed.univ-tlemcen.dz/graduation-pharmacie',
+                'PHARM_YEAR3': 'https://fmed.univ-tlemcen.dz/graduation-pharmacie',
+                'PHARM_YEAR4': 'https://fmed.univ-tlemcen.dz/graduation-pharmacie',
+                'PHARM_YEAR5': 'https://fmed.univ-tlemcen.dz/graduation-pharmacie'
+            };
+
+            const link = driveLinks[code];
+            if (link) {
+                window.open(link, '_blank');
+                showNotification('📂 Redirection vers les ressources...', 'success');
+            } else {
+                showNotification('❌ Lien non disponible', 'error');
+            }
+        }
+
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? '#4CAF50' : '#f44336'};
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 10000;
+                font-weight: 500;
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+                const tabBtns = document.querySelectorAll('.tab-btn');
+                const tabContents = document.querySelectorAll('.specialty-content');
+
+                tabBtns.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        // Remove active class from all buttons and contents
+                        tabBtns.forEach(btn => btn.classList.remove('active'));
+                        tabContents.forEach(content => content.classList.remove('active-tab'));
+
+                        // Add active class to clicked button
+                        this.classList.add('active');
+
+                        // Show corresponding content
+                        const tabId = this.getAttribute('data-tab');
+                        document.getElementById(tabId).classList.add('active-tab');
+                    });
+                });
+
+                // Accordion functionality
+                const yearHeaders = document.querySelectorAll('.year-header');
+                yearHeaders.forEach(header => {
+                    header.addEventListener('click', () => {
+                        const content = header.nextElementSibling;
+                        const icon = header.querySelector('i');
+                        
+                        // Toggle content
+                        if (content.style.maxHeight) {
+                            content.style.maxHeight = null;
+                            icon.classList.remove('fa-chevron-up');
+                            icon.classList.add('fa-chevron-down');
+                        } else {
+                            content.style.maxHeight = content.scrollHeight + "px";
+                            icon.classList.remove('fa-chevron-down');
+                            icon.classList.add('fa-chevron-up');
+                        }
+                    });
+                });
+
+                // Back to top button
+                const backToTopBtn = document.querySelector('.back-to-top');
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) {
+                        backToTopBtn.classList.add('show');
+                    } else {
+                        backToTopBtn.classList.remove('show');
+                    }
+                });
+
+                backToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>

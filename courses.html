@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours | Med Education</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <style>
+        .module-actions {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #4285f4, #34a853);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(66, 133, 244, 0.3);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(66, 133, 244, 0.4);
+            color: white;
+        }
+        
+        .download-btn i {
+            font-size: 1.1rem;
+        }
+        
+        .module-card {
+            position: relative;
+        }
+        
+        .module-card h4 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        /* Mobile Menu Close Button */
+        .menu-close-item {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1003;
+        }
+        
+        .menu-close {
+            background: #ff4444;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .menu-close:hover {
+            background: #ff6666;
+            transform: scale(1.1);
+        }
+        
+        .menu-close i {
+            font-size: 1rem;
+        }
+        
+        /* Show close button when menu is active */
+        .nav-links.active .menu-close-item {
+            display: block;
+        }
+        
+        /* Hide menu toggle when menu is open */
+        .navigation.menu-open .menu-toggle {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <img src="img/logo16.jpg" alt="Logo Med Education" width="150" height="50">
+        <div class="navigation">
+            <button class="menu-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li class="menu-close-item">
+                    <button class="menu-close" aria-label="Fermer le menu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="courses.html" class="active">Cours</a></li>
+                <li><a href="exmens.html">Examens</a></li>
+                <li><a href="qcm.html">QCM</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Connexion</a></li>
+                <li><a href="register.html" class="btn-register">Inscription</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Courses Banner -->
+    <section class="exam-banner">
+        <div class="container">
+            <h1>Nos Programmes Académiques</h1>
+            <p>Explorez notre catalogue complet de formations médicales organisées par spécialité et année d'étude</p>
+        </div>
+    </section>
+
+    <!-- Specialties Tabs -->
+    <section class="specialties-tabs">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="medicine">
+                    <i class="fas fa-stethoscope"></i> Médecine
+                </button>
+                <button class="tab-btn" data-tab="dentistry">
+                    <i class="fas fa-tooth"></i> Médecine Dentaire
+                </button>
+                <button class="tab-btn" data-tab="pharmacy">
+                    <i class="fas fa-pills"></i> Pharmacie
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medicine Content -->
+    <section class="specialty-content active-tab" id="medicine">
+        <div class="container">
+            <h2 class="specialty-title">Médecine</h2>
+            <p class="specialty-description">
+                Le département de médecine est le plus important en termes d'effectifs. 
+                La durée des études est de sept ans, divisée en trois cycles : un cycle pré-clinique de trois ans (PCEM), 
+                un cycle clinique de trois ans (DCEM) et une année de stage interné.
+            </p>
+            
+            <div class="years-accordion">
+                <!-- PCEM Cycle -->
+                <div class="year-card">
+                    <div class="year-header" onclick="toggleYear(this)">
+                        <h3><i class="fas fa-microscope"></i> Cycle Pré-clinique (PCEM) - 3 ans</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>1ère Année</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('PCEM1')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Cytologie</li>
+                                    <li>Physiologie humaine</li>
+                                    <li>Histologie</li>
+                                    <li>Embryologie</li>
+                                    <li>Anatomie générale</li>
+                                    <li>Chimie générale et organique</li>
+                                    <li>Biochimie structurale</li>
+                                    <li>Biophysique</li>
+                                    <li>Biostatistique et Informatique</li>
+                                    <li>Santé, société, humanité</li>
+                                    <li>Français</li>
+                                    <li>Secourisme</li>
+                                </ul>
+                            </div>
+                            <div class="module-card">
+                                <h4>2ème Année</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('PCEM2')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Cardio-respiratoire et organes hématopoïétiques</li>
+                                    <li>Digestif</li>
+                                    <li>Urinaire</li>
+                                    <li>Endocrino-Génital</li>
+                                    <li>Système nerveux et organes des sens</li>
+                                    <li>Immunologie</li>
+                                    <li>Génétique</li>
+                                    <li>Anglais</li>
+                                    <li>Stage infirmier</li>
+                                </ul>
+                            </div>
+                            <div class="module-card">
+                                <h4>3ème Année</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('PCEM3')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Psychologie médicale, sémiologie générale et appareil cardio-respiratoire</li>
+                                    <li>Appareil neurologique, locomoteur et cutané</li>
+                                    <li>Appareil Endocrinien, de reproduction et urinaire</li>
+                                    <li>Appareil digestif et organes hématopoiétiques</li>
+                                    <li>Microbiologie médicale</li>
+                                    <li>Parasitologie et mycologie</li>
+                                    <li>Anatomie et cytologie pathologique</li>
+                                    <li>Immunologie</li>
+                                    <li>Pharmacologie clinique</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DCEM Cycle -->
+                <div class="year-card">
+                    <div class="year-header" onclick="toggleYear(this)">
+                        <h3><i class="fas fa-user-md"></i> Cycle Clinique (DCEM) - 3 ans</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>4ème Année</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('DCEM1')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Cardiologie</li>
+                                    <li>Pneumo-phtisiologie</li>
+                                    <li>Maladies Infectieuses</li>
+                                    <li>Hépato-Gastro-Entérologie</li>
+                                    <li>ONCO-Hématologie</li>
+                                    <li>Neurologie</li>
+                                </ul>
+                            </div>
+                            <div class="module-card">
+                                <h4>5ème Année</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('DCEM2')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Orthopédie, Traumatologie, Rééducation</li>
+                                    <li>Urologie-Néphrologie</li>
+                                    <li>Pédiatrie</li>
+                                    <li>Santé mentale</li>
+                                    <li>Gynécologie-Obstétrique</li>
+                                    <li>Endocrinologie-maladies métaboliques</li>
+                                </ul>
+                            </div>
+                            <div class="module-card">
+                                <h4>6ème Année</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('DCEM3')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Oto-Rhino-Laryngologie</li>
+                                    <li>Ophtalmologie</li>
+                                    <li>Dermatologie</li>
+                                    <li>Médecine sociale</li>
+                                    <li>Médecine légale</li>
+                                    <li>Epidémiologie</li>
+                                    <li>Médecine du travail</li>
+                                    <li>Urgence médico-chirurgicale et thérapeutique</li>
+                                    <li>Droit médical</li>
+                                    <li>Economie de santé</li>
+                                    <li>Psychologie médicale</li>
+                                    <li>Maladies systémiques</li>
+                                    <li>Médecine d'urgence</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internship -->
+                <div class="year-card">
+                    <div class="year-header" onclick="toggleYear(this)">
+                        <h3><i class="fas fa-hospital"></i> 7ème Année - Stage Interné</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>7ème Année - Stage Hospitalier</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('MED_INTERNSHIP')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Médecine interne (3 mois)</li>
+                                    <li>Chirurgie (3 mois)</li>
+                                    <li>Pédiatrie (2 mois)</li>
+                                    <li>Gynécologie-obstétrique (2 mois)</li>
+                                    <li>Médecine d'urgence (1 mois)</li>
+                                    <li>Stage libre (1 mois)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dentistry Content -->
+    <section class="specialty-content" id="dentistry">
+        <div class="container">
+            <h2 class="specialty-title">Médecine Dentaire</h2>
+            <p class="specialty-description">
+                La durée des études est de six ans, divisée en deux cycles : un cycle préclinique de deux ans, 
+                un cycle clinique de trois ans et un stage interné d'une année avec soutenance d'un mémoire de fin d'étude.
+            </p>
+            
+            <div class="years-accordion">
+                <!-- Preclinical Cycle -->
+                <div class="year-card">
+                    <div class="year-header" onclick="toggleYear(this)">
+                        <h3><i class="fas fa-microscope"></i> Cycle Préclinique - 2 ans</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>1ère Année</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('DENT1')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Anatomie générale</li>
+                                    <li>Physiologie générale</li>
+                                    <li>Histologie/Embryologie</li>
+                                    <li>Génétique</li>
+                                    <li>Biochimie</li>
+                                    <li>Physique</li>
+                                    <li>Biophysique</li>
+                                    <li>Biomathématiques/Statistiques</li>
+                                    <li>Chimie</li>
+                                    <li>Santé sociale et sciences humaines</li>
+                                    <li>Langue anglaise</li>
+                                    <li>Langue française</li>
+                                </ul>
+                            </div>
+                            <div class="module-card">
+                                <h4>2ème Année</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('DENT2')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Prothèse</li>
+                                    <li>Odontologie conservatrice/Endodontie</li>
+                                    <li>Anatomie humaine</li>
+                                    <li>Microbiologie</li>
+                                    <li>Physiologie</li>
+                                    <li>Histologie</li>
+                                    <li>Anatomie dentaire</li>
+                                    <li>Bio-matériaux</li>
+                                    <li>Immunologie</li>
+                                    <li>Pathologie et Chirurgie Buccales</li>
+                                    <li>Parodontologie</li>
+                                    <li>Orthopédie dento faciale</li>
+                                    <li>Langue anglaise</li>
+                                    <li>Hygiène et prévention</li>
+                                    <li>Informatique</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clinical Cycle -->
+                <div class="year-card">
+                    <div class="year-header" onclick="toggleYear(this)">
+                        <h3><i class="fas fa-tooth"></i> Cycle Clinique - 3 ans</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>3ème Année</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('DENT3')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Prothèse</li>
+                                    <li>Odontologie conservatrice/Endodontie</li>
+                                    <li>Pathologie et Chirurgie Buccales</li>
+                                    <li>Parodontologie</li>
+                                    <li>Orthopédie dento faciale</li>
+                                    <li>Anatomie-Pathologie</li>
+                                    <li>Pharmacologie</li>
+                                    <li>Anestésiologie</li>
+                                    <li>Imagerie médicale</li>
+                                    <li>Oxyologie</li>
+                                    <li>Occlusodontie</li>
+                                </ul>
+                            </div>
+                            <div class="module-card">
+                                <h4>4ème Année</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('DENT4')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Prothèse</li>
+                                    <li>Odontologie conservatrice/Endodontie</li>
+                                    <li>Pathologie et Chirurgie Buccales</li>
+                                    <li>Parodontologie</li>
+                                    <li>Orthopédie dento faciale</li>
+                                    <li>Pathologie médicale</li>
+                                    <li>Déontologie et droit médical</li>
+                                    <li>Implantologie</li>
+                                    <li>Odontologie Pédiatrique</li>
+                                    <li>Odontologie gériatrique</li>
+                                </ul>
+                            </div>
+                            <div class="module-card">
+                                <h4>5ème Année</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('DENT5')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Odontologie préventive et sociale</li>
+                                    <li>Odontologie conservatrice/Endodontie</li>
+                                    <li>Prothèse</li>
+                                    <li>Pathologie et Chirurgie Buccales</li>
+                                    <li>Parodontologie</li>
+                                    <li>Orthopédie dento faciale</li>
+                                    <li>Odontologie Pédiatrique</li>
+                                    <li>Implantologie</li>
+                                    <li>Ergonomie</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internship -->
+                <div class="year-card">
+                    <div class="year-header" onclick="toggleYear(this)">
+                        <h3><i class="fas fa-hospital"></i> Stage Interné - 1 an</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>6ème Année - Stage Interné</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('DENT_INTERNSHIP')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Stage interné</li>
+                                    <li>Projet de fin d'étude</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pharmacy Content -->
+    <section class="specialty-content" id="pharmacy">
+        <div class="container">
+            <h2 class="specialty-title">Pharmacie</h2>
+            <p class="specialty-description">
+                La durée est de 5 années d'étude et un an d'internat avec soutenance d'un mémoire de fin d'études. 
+                Après validation des six années d'étude, l'étudiant acquiert le titre de docteur en pharmacie.
+            </p>
+            
+            <div class="years-accordion">
+                <!-- Years 1-2 -->
+                <div class="year-card">
+                    <div class="year-header" onclick="toggleYear(this)">
+                        <h3><i class="fas fa-flask"></i> Années 1-2 : Fondamentaux</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>1ère Année</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('PHARM1')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Biomathématique-Informatique-Biostatistique</li>
+                                    <li>Chimie pharmaceutique générale</li>
+                                    <li>Chimie pharmaceutique organique</li>
+                                    <li>Physique pharmaceutique</li>
+                                    <li>Biologie cellulaire</li>
+                                    <li>Biologie végétale</li>
+                                    <li>Langue Française</li>
+                                    <li>Anatomie fonctionnelle descriptive</li>
+                                    <li>Sciences humaines</li>
+                                    <li>Physiologie</li>
+                                </ul>
+                            </div>
+                            <div class="module-card">
+                                <h4>2ème Année</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('PHARM2')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Physio-pathologie</li>
+                                    <li>Chimie minérale</li>
+                                    <li>Chimie analytique</li>
+                                    <li>Biophysique</li>
+                                    <li>Botanique médicale</li>
+                                    <li>Génétique</li>
+                                    <li>Culture générale</li>
+                                    <li>Biochimie structurale, métabolique et moléculaire</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Years 3-4 -->
+                <div class="year-card">
+                    <div class="year-header" onclick="toggleYear(this)">
+                        <h3><i class="fas fa-pills"></i> Années 3-4 : Spécialisation</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>3ème Année</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('PHARM3')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Pharmacognosie</li>
+                                    <li>Pharmacie galénique</li>
+                                    <li>Chimie thérapeutique</li>
+                                    <li>Chimie analytique</li>
+                                    <li>Pharmacologie générale</li>
+                                    <li>Sémiologie médicale</li>
+                                </ul>
+                            </div>
+                            <div class="module-card">
+                                <h4>4ème Année</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('PHARM4')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Parasitologie mycologie</li>
+                                    <li>Bactériologie médicale</li>
+                                    <li>Biochimie</li>
+                                    <li>Hémobiologie</li>
+                                    <li>Immunologie appliquée</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 5 -->
+                <div class="year-card">
+                    <div class="year-header" onclick="toggleYear(this)">
+                        <h3><i class="fas fa-graduation-cap"></i> 5ème Année : Approfondissement</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>5ème Année</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('PHARM5')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Toxicologie</li>
+                                    <li>Hydrologie-Bromatologie</li>
+                                    <li>Epidémiologie-méthodologie de la recherche</li>
+                                    <li>Droit pharmaceutique et éthique</li>
+                                    <li>Gestion pharmaceutique</li>
+                                    <li>Pharmacie clinique</li>
+                                    <li>Pharmacie industrielle</li>
+                                    <li>Pharmacie hospitalière</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internship -->
+                <div class="year-card">
+                    <div class="year-header" onclick="toggleYear(this)">
+                        <h3><i class="fas fa-hospital"></i> Internat - 1 an</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>6ème Année - Stage Interné</h4>
+                                <div class="module-actions">
+                                    <a href="#" class="download-btn" onclick="downloadMaterials('PHARM_INTERNSHIP')">
+                                        <i class="fab fa-google-drive"></i> Télécharger les Matériaux
+                                    </a>
+                                </div>
+                                <ul>
+                                    <li>Stage</li>
+                                    <li>Note Mémoire</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="img/logo16.jpg" alt="Med Education" class="footer-logo">
+                <p class="footer-description">
+                    Med Education est la plateforme leader d'apprentissage en médecine, offrant des ressources pédagogiques de qualité pour les étudiants et professionnels de santé.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-title">Liens Rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+                    <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Nos Cours</a></li>
+                    <li><a href="exmens.html"><i class="fas fa-chevron-right"></i> Examens Blancs</a></li>
+                    <li><a href="about.html"><i class="fas fa-chevron-right"></i> À Propos</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    <li><a href="login.html"><i class="fas fa-chevron-right"></i> Connexion</a></li>
+                    <li><a href="register.html"><i class="fas fa-chevron-right"></i> Inscription</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-title">Nos Spécialités</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Médecine Générale</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Chirurgie Dentaire</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Pharmacie</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Pédiatrie</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Cardiologie</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-title">Contactez-nous</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Hai Sabah - Oran - Algérie</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+213 779 351 179</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>Mededucation31@gmail.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Lun-Ven: 9h-18h</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2025 Med Education. Tous droits réservés.</p>
+                <div class="legal-links">
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const specialtyContents = document.querySelectorAll('.specialty-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all tabs and contents
+                tabBtns.forEach(b => b.classList.remove('active'));
+                specialtyContents.forEach(content => content.classList.remove('active-tab'));
+
+                // Add active class to clicked tab
+                btn.classList.add('active');
+
+                // Show corresponding content
+                const targetTab = btn.getAttribute('data-tab');
+                document.getElementById(targetTab).classList.add('active-tab');
+            });
+        });
+
+        // Year accordion functionality
+        function toggleYear(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('i:last-child');
+            
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Back to top button
+        const backToTopBtn = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuClose = document.querySelector('.menu-close');
+        const navLinks = document.querySelector('.nav-links');
+        const navigation = document.querySelector('.navigation');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.add('active');
+            navigation.classList.add('menu-open');
+        });
+
+        menuClose.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            navigation.classList.remove('menu-open');
+        });
+
+        // Close menu when clicking on nav links
+        const navLinkItems = document.querySelectorAll('.nav-links a');
+        navLinkItems.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                navigation.classList.remove('menu-open');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navigation.contains(e.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                navigation.classList.remove('menu-open');
+            }
+        });
+        // Download materials function
+        function downloadMaterials(moduleCode) {
+            // Google Drive links for each module
+            const driveLinks = {
+                // Medicine
+                'PCEM1': 'https://drive.google.com/drive/u/0/folders/15298x8srAqQysst_2QGkMqJl1EnFEDwc',
+                'PCEM2': 'https://drive.google.com/drive/folders/1ABC123_PCEM2',
+                'PCEM3': 'https://drive.google.com/drive/folders/1ABC123_PCEM3',
+                
+                // Medicine - DCEM
+                'DCEM1': 'https://drive.google.com/drive/folders/1ABC123_DCEM1',
+                'DCEM2': 'https://drive.google.com/drive/folders/1ABC123_DCEM2',
+                'DCEM3': 'https://drive.google.com/drive/folders/1ABC123_DCEM3',
+                
+                // Medicine - Internship
+                'MED_INTERNSHIP': 'https://drive.google.com/drive/folders/1ABC123_MED_INTERNSHIP',
+                
+                // Dentistry
+                'DENT1': 'https://drive.google.com/drive/folders/1ABC123_DENT1',
+                'DENT2': 'https://drive.google.com/drive/folders/1ABC123_DENT2',
+                'DENT3': 'https://drive.google.com/drive/folders/1ABC123_DENT3',
+                'DENT4': 'https://drive.google.com/drive/folders/1ABC123_DENT4',
+                'DENT5': 'https://drive.google.com/drive/folders/1ABC123_DENT5',
+                'DENT_INTERNSHIP': 'https://drive.google.com/drive/folders/1ABC123_DENT_INTERNSHIP',
+                
+                // Pharmacy
+                'PHARM1': 'https://drive.google.com/drive/folders/1ABC123_PHARM1',
+                'PHARM2': 'https://drive.google.com/drive/folders/1ABC123_PHARM2',
+                'PHARM3': 'https://drive.google.com/drive/folders/1ABC123_PHARM3',
+                'PHARM4': 'https://drive.google.com/drive/folders/1ABC123_PHARM4',
+                'PHARM5': 'https://drive.google.com/drive/folders/1ABC123_PHARM5',
+                'PHARM_INTERNSHIP': 'https://drive.google.com/drive/folders/1ABC123_PHARM_INTERNSHIP'
+            };
+
+            const driveLink = driveLinks[moduleCode];
+            if (driveLink) {
+                // Open Google Drive link in new tab
+                window.open(driveLink, '_blank');
+                
+                // Show success message
+                showNotification('Redirection vers Google Drive...', 'success');
+            } else {
+                showNotification('Lien non disponible pour ce module', 'error');
+            }
+        }
+
+        // Notification function
+        function showNotification(message, type = 'info') {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+                <span>${message}</span>
+            `;
+            
+            // Add styles
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? '#4CAF50' : type === 'error' ? '#f44336' : '#2196F3'};
+                color: white;
+                padding: 15px 20px;
+                border-radius: 5px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 10000;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-weight: 500;
+                animation: slideIn 0.3s ease;
+            `;
+            
+            // Add animation styles
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                @keyframes slideOut {
+                    from { transform: translateX(0); opacity: 1; }
+                    to { transform: translateX(100%); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Add to page
+            document.body.appendChild(notification);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
