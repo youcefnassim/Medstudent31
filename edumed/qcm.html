@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM Interactifs | Med Education</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+    
+  <nav>
+    <img src="img/logo16.jpg" alt="Logo Med Education" width="150" height="50">
+    <div class="navigation">
+        <button class="menu-toggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li class="menu-close-item">
+                <button class="menu-close" aria-label="Fermer le menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="courses.html">Cours</a></li>
+            <li><a href="exmens.html">Examens</a></li>
+            <li><a href="qcm.html" class="active">QCM</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html" class="btn-login">Connexion</a></li>
+            <li><a href="register.html" class="btn-register">Inscription</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Banner Section -->
+    <section class="exam-banner">
+        <div class="container">
+            <h1>QCM Interactifs</h1>
+            <p>Testez vos connaissances avec nos QCM spécialisés par matière et par année d'études</p>
+        </div>
+    </section>
+
+    <!-- Specialties Tabs -->
+    <section class="specialties-tabs">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="medecine-qcm">Médecine (6 ans)</button>
+                <button class="tab-btn" data-tab="dentaire-qcm">Chirurgie Dentaire (5 ans)</button>
+                <button class="tab-btn" data-tab="pharmacie-qcm">Pharmacie (5 ans)</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medicine QCM Content -->
+    <section id="medecine-qcm" class="specialty-content active-tab">
+        <div class="container">
+            <h2 class="specialty-title">QCM de Médecine</h2>
+            <p class="specialty-description">Testez vos connaissances médicales avec nos QCM interactifs</p>
+            
+            <div class="years-accordion">
+                <!-- Year 1 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Première Année (PACES)</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="module-actions" style="margin-bottom: 20px; text-align: center;">
+                            <a href="#" class="download-btn" onclick="downloadQCM('MED_YEAR1'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.3s;">
+                                <i class="fas fa-download"></i> Télécharger Tous les QCM - 1ère Année
+                            </a>
+                        </div>
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>📚 QCM Disponibles - 1ère Année</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>• Cytologie</li>
+                                    <li>• Physiologie humaine</li>
+                                    <li>• Histologie</li>
+                                    <li>• Embryologie</li>
+                                    <li>• Anatomie générale</li>
+                                    <li>• Chimie générale et organique</li>
+                                    <li>• Biochimie structurale</li>
+                                    <li>• Biophysique</li>
+                                    <li>• Biostatistique et Informatique</li>
+                                    <li>• Santé, société, humanité</li>
+                                    <li>• Français</li>
+                                    <li>• Secourisme</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 2 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Deuxième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="module-actions" style="margin-bottom: 20px; text-align: center;">
+                            <a href="#" class="download-btn" onclick="downloadQCM('MED_YEAR2'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.3s;">
+                                <i class="fas fa-download"></i> Télécharger Tous les QCM - 2ème Année
+                            </a>
+                        </div>
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>📚 QCM Disponibles - 2ème Année</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>• Cardio-respiratoire et organes hématopoïétiques</li>
+                                    <li>• Digestif</li>
+                                    <li>• Urinaire</li>
+                                    <li>• Endocrino-Génital</li>
+                                    <li>• Système nerveux et organes des sens</li>
+                                    <li>• Immunologie</li>
+                                    <li>• Génétique</li>
+                                    <li>• Anglais</li>
+                                    <li>• Stage infirmier</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 3 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Troisième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="module-actions" style="margin-bottom: 20px; text-align: center;">
+                            <a href="#" class="download-btn" onclick="downloadQCM('MED_YEAR3'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.3s;">
+                                <i class="fas fa-download"></i> Télécharger Tous les QCM - 3ème Année
+                            </a>
+                        </div>
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>📚 QCM Disponibles - 3ème Année</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>• Psychologie médicale, sémiologie générale et appareil cardio-respiratoire</li>
+                                    <li>• Appareil neurologique, locomoteur et cutané</li>
+                                    <li>• Appareil Endocrinien, de reproduction et urinaire</li>
+                                    <li>• Appareil digestif et organes hématopoiétiques</li>
+                                    <li>• Microbiologie médicale</li>
+                                    <li>• Parasitologie et mycologie</li>
+                                    <li>• Anatomie et cytologie pathologique</li>
+                                    <li>• Immunologie</li>
+                                    <li>• Pharmacologie clinique</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 4 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Quatrième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="module-actions" style="margin-bottom: 20px; text-align: center;">
+                            <a href="#" class="download-btn" onclick="downloadQCM('MED_YEAR4'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.3s;">
+                                <i class="fas fa-download"></i> Télécharger Tous les QCM - 4ème Année
+                            </a>
+                        </div>
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>📚 QCM Disponibles - 4ème Année</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>• Cardiologie</li>
+                                    <li>• Pneumo-phtisiologie</li>
+                                    <li>• Maladies Infectieuses</li>
+                                    <li>• Hépato-Gastro-Entérologie</li>
+                                    <li>• ONCO-Hématologie</li>
+                                    <li>• Neurologie</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 5 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Cinquième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="module-actions" style="margin-bottom: 20px; text-align: center;">
+                            <a href="#" class="download-btn" onclick="downloadQCM('MED_YEAR5'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.3s;">
+                                <i class="fas fa-download"></i> Télécharger Tous les QCM - 5ème Année
+                            </a>
+                        </div>
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>📚 QCM Disponibles - 5ème Année</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>• Orthopédie, Traumatologie, Rééducation</li>
+                                    <li>• Urologie-Néphrologie</li>
+                                    <li>• Pédiatrie</li>
+                                    <li>• Santé mentale</li>
+                                    <li>• Gynécologie-Obstétrique</li>
+                                    <li>• Endocrinologie-maladies métaboliques</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 6 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Sixième Année (Externat)</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="module-actions" style="margin-bottom: 20px; text-align: center;">
+                            <a href="#" class="download-btn" onclick="downloadQCM('MED_YEAR6'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.3s;">
+                                <i class="fas fa-download"></i> Télécharger Tous les QCM - 6ème Année
+                            </a>
+                        </div>
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>📚 QCM Disponibles - 6ème Année</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>• Oto-Rhino-Laryngologie</li>
+                                    <li>• Ophtalmologie</li>
+                                    <li>• Dermatologie</li>
+                                    <li>• Médecine sociale</li>
+                                    <li>• Médecine légale</li>
+                                    <li>• Epidémiologie</li>
+                                    <li>• Médecine du travail</li>
+                                    <li>• Urgence médico-chirurgicale et thérapeutique</li>
+                                    <li>• Droit médical</li>
+                                    <li>• Economie de santé</li>
+                                    <li>• Psychologie médicale</li>
+                                    <li>• Maladies systémiques</li>
+                                    <li>• Médecine d'urgence</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dentaire QCM Content -->
+    <section id="dentaire-qcm" class="specialty-content">
+        <div class="container">
+            <h2 class="specialty-title">QCM de Chirurgie Dentaire</h2>
+            <p class="specialty-description">Testez vos connaissances en chirurgie dentaire</p>
+            
+            <div class="years-accordion">
+                <!-- Year 1 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Première Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="module-actions" style="margin-bottom: 20px; text-align: center;">
+                            <a href="#" class="download-btn" onclick="downloadQCM('DENT_YEAR1'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.3s;">
+                                <i class="fas fa-download"></i> Télécharger Tous les QCM - 1ère Année
+                            </a>
+                        </div>
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>📚 QCM Disponibles - 1ère Année</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>• Anatomie générale</li>
+                                    <li>• Physiologie générale</li>
+                                    <li>• Histologie/Embryologie</li>
+                                    <li>• Génétique</li>
+                                    <li>• Biochimie</li>
+                                    <li>• Physique</li>
+                                    <li>• Biophysique</li>
+                                    <li>• Biomathématiques/Statistiques</li>
+                                    <li>• Chimie</li>
+                                    <li>• Santé sociale et sciences humaines</li>
+                                    <li>• Langue anglaise</li>
+                                    <li>• Langue française</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 2 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Deuxième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="module-actions" style="margin-bottom: 20px; text-align: center;">
+                            <a href="#" class="download-btn" onclick="downloadQCM('DENT_YEAR2'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.3s;">
+                                <i class="fas fa-download"></i> Télécharger Tous les QCM - 2ème Année
+                            </a>
+                        </div>
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>📚 QCM Disponibles - 2ème Année</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>• Prothèse</li>
+                                    <li>• Odontologie conservatrice/Endodontie</li>
+                                    <li>• Anatomie humaine</li>
+                                    <li>• Microbiologie</li>
+                                    <li>• Physiologie</li>
+                                    <li>• Histologie</li>
+                                    <li>• Anatomie dentaire</li>
+                                    <li>• Bio-matériaux</li>
+                                    <li>• Immunologie</li>
+                                    <li>• Pathologie et Chirurgie Buccales</li>
+                                    <li>• Parodontologie</li>
+                                    <li>• Orthopédie dento faciale</li>
+                                    <li>• Langue anglaise</li>
+                                    <li>• Hygiène et prévention</li>
+                                    <li>• Informatique</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 3 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Troisième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="module-actions" style="margin-bottom: 20px; text-align: center;">
+                            <a href="#" class="download-btn" onclick="downloadQCM('DENT_YEAR3'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.3s;">
+                                <i class="fas fa-download"></i> Télécharger Tous les QCM - 3ème Année
+                            </a>
+                        </div>
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>📚 QCM Disponibles - 3ème Année</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>• Prothèse</li>
+                                    <li>• Odontologie conservatrice/Endodontie</li>
+                                    <li>• Pathologie et Chirurgie Buccales</li>
+                                    <li>• Parodontologie</li>
+                                    <li>• Orthopédie dento faciale</li>
+                                    <li>• Anatomie-Pathologie</li>
+                                    <li>• Pharmacologie</li>
+                                    <li>• Anestésiologie</li>
+                                    <li>• Imagerie médicale</li>
+                                    <li>• Oxyologie</li>
+                                    <li>• Occlusodontie</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 4 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Quatrième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="module-actions" style="margin-bottom: 20px; text-align: center;">
+                            <a href="#" class="download-btn" onclick="downloadQCM('DENT_YEAR4'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.3s;">
+                                <i class="fas fa-download"></i> Télécharger Tous les QCM - 4ème Année
+                            </a>
+                        </div>
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>📚 QCM Disponibles - 4ème Année</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>• Prothèse</li>
+                                    <li>• Odontologie conservatrice/Endodontie</li>
+                                    <li>• Pathologie et Chirurgie Buccales</li>
+                                    <li>• Parodontologie</li>
+                                    <li>• Orthopédie dento faciale</li>
+                                    <li>• Pathologie médicale</li>
+                                    <li>• Déontologie et droit médical</li>
+                                    <li>• Implantologie</li>
+                                    <li>• Odontologie Pédiatrique</li>
+                                    <li>• Odontologie gériatrique</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 5 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Cinquième Année (Externat)</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="module-actions" style="margin-bottom: 20px; text-align: center;">
+                            <a href="#" class="download-btn" onclick="downloadQCM('DENT_YEAR5'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.3s;">
+                                <i class="fas fa-download"></i> Télécharger Tous les QCM - 5ème Année
+                            </a>
+                        </div>
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>📚 QCM Disponibles - 5ème Année</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>• Odontologie préventive et sociale</li>
+                                    <li>• Odontologie conservatrice/Endodontie</li>
+                                    <li>• Prothèse</li>
+                                    <li>• Pathologie et Chirurgie Buccales</li>
+                                    <li>• Parodontologie</li>
+                                    <li>• Orthopédie dento faciale</li>
+                                    <li>• Odontologie Pédiatrique</li>
+                                    <li>• Implantologie</li>
+                                    <li>• Ergonomie</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pharmacie QCM Content -->
+    <section id="pharmacie-qcm" class="specialty-content">
+        <div class="container">
+            <h2 class="specialty-title">QCM de Pharmacie</h2>
+            <p class="specialty-description">Testez vos connaissances pharmaceutiques</p>
+            
+            <div class="years-accordion">
+                <!-- Year 1 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Première Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="module-actions" style="margin-bottom: 20px; text-align: center;">
+                            <a href="#" class="download-btn" onclick="downloadQCM('PHARM_YEAR1'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.3s;">
+                                <i class="fas fa-download"></i> Télécharger Tous les QCM - 1ère Année
+                            </a>
+                        </div>
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>📚 QCM Disponibles - 1ère Année</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>• Biomathématique-Informatique-Biostatistique</li>
+                                    <li>• Chimie pharmaceutique générale</li>
+                                    <li>• Chimie pharmaceutique organique</li>
+                                    <li>• Physique pharmaceutique</li>
+                                    <li>• Biologie cellulaire</li>
+                                    <li>• Biologie végétale</li>
+                                    <li>• Langue Française</li>
+                                    <li>• Anatomie fonctionnelle descriptive</li>
+                                    <li>• Sciences humaines</li>
+                                    <li>• Physiologie</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 2 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Deuxième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="module-actions" style="margin-bottom: 20px; text-align: center;">
+                            <a href="#" class="download-btn" onclick="downloadQCM('PHARM_YEAR2'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.3s;">
+                                <i class="fas fa-download"></i> Télécharger Tous les QCM - 2ème Année
+                            </a>
+                        </div>
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>📚 QCM Disponibles - 2ème Année</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>• Physio-pathologie</li>
+                                    <li>• Chimie minérale</li>
+                                    <li>• Chimie analytique</li>
+                                    <li>• Biophysique</li>
+                                    <li>• Botanique médicale</li>
+                                    <li>• Génétique</li>
+                                    <li>• Culture générale</li>
+                                    <li>• Biochimie structurale, métabolique et moléculaire</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 3 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Troisième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="module-actions" style="margin-bottom: 20px; text-align: center;">
+                            <a href="#" class="download-btn" onclick="downloadQCM('PHARM_YEAR3'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.3s;">
+                                <i class="fas fa-download"></i> Télécharger Tous les QCM - 3ème Année
+                            </a>
+                        </div>
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>📚 QCM Disponibles - 3ème Année</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>• Pharmacognosie</li>
+                                    <li>• Pharmacie galénique</li>
+                                    <li>• Chimie thérapeutique</li>
+                                    <li>• Chimie analytique</li>
+                                    <li>• Pharmacologie générale</li>
+                                    <li>• Sémiologie médicale</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 4 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Quatrième Année</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="module-actions" style="margin-bottom: 20px; text-align: center;">
+                            <a href="#" class="download-btn" onclick="downloadQCM('PHARM_YEAR4'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.3s;">
+                                <i class="fas fa-download"></i> Télécharger Tous les QCM - 4ème Année
+                            </a>
+                        </div>
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>📚 QCM Disponibles - 4ème Année</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>• Parasitologie mycologie</li>
+                                    <li>• Bactériologie médicale</li>
+                                    <li>• Biochimie</li>
+                                    <li>• Hémobiologie</li>
+                                    <li>• Immunologie appliquée</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Year 5 -->
+                <div class="year-card" data-aos="fade-up">
+                    <div class="year-header">
+                        <h3>Cinquième Année (Externat)</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="year-content">
+                        <div class="module-actions" style="margin-bottom: 20px; text-align: center;">
+                            <a href="#" class="download-btn" onclick="downloadQCM('PHARM_YEAR5'); return false;" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: transform 0.3s;">
+                                <i class="fas fa-download"></i> Télécharger Tous les QCM - 5ème Année
+                            </a>
+                        </div>
+                        <div class="modules-grid">
+                            <div class="module-card">
+                                <h4>📚 QCM Disponibles - 5ème Année</h4>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li>• Toxicologie</li>
+                                    <li>• Hydrologie-Bromatologie</li>
+                                    <li>• Epidémiologie-méthodologie de la recherche</li>
+                                    <li>• Droit pharmaceutique et éthique</li>
+                                    <li>• Gestion pharmaceutique</li>
+                                    <li>• Pharmacie clinique</li>
+                                    <li>• Pharmacie industrielle</li>
+                                    <li>• Pharmacie hospitalière</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QCM Modal -->
+    <div id="qcm-modal" class="qcm-modal">
+        <div class="qcm-modal-content">
+            <div class="qcm-header">
+                <h3 id="qcm-title">QCM en cours</h3>
+                <div class="qcm-timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="timer">00:00</span>
+                </div>
+                <button class="close-modal" id="close-qcm">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="qcm-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <span id="progress-text">Question 1 sur 20</span>
+            </div>
+
+            <div class="qcm-question-container">
+                <div class="question" id="question-container">
+                    <h4 id="question-text">Question en cours de chargement...</h4>
+                    <div class="answers" id="answers-container">
+                        <!-- Les réponses seront générées dynamiquement -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="qcm-navigation">
+                <button class="btn btn-secondary" id="prev-question" disabled>
+                    <i class="fas fa-chevron-left"></i> Précédent
+                </button>
+                <button class="btn btn-primary" id="next-question">
+                    Suivant <i class="fas fa-chevron-right"></i>
+                </button>
+                <button class="btn btn-success" id="finish-qcm" style="display: none;">
+                    <i class="fas fa-check"></i> Terminer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div id="results-modal" class="results-modal">
+        <div class="results-modal-content">
+            <div class="results-header">
+                <h3>Résultats du QCM</h3>
+                <button class="close-modal" id="close-results">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="results-content">
+                <div class="score-circle">
+                    <div class="score-percentage" id="score-percentage">0%</div>
+                    <div class="score-label">Score</div>
+                </div>
+                
+                <div class="results-details">
+                    <div class="result-item">
+                        <span class="result-label">Questions correctes :</span>
+                        <span class="result-value" id="correct-answers">0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Questions totales :</span>
+                        <span class="result-value" id="total-questions">0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Temps utilisé :</span>
+                        <span class="result-value" id="time-used">00:00</span>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button class="btn btn-primary" id="retry-qcm">
+                        <i class="fas fa-redo"></i> Recommencer
+                    </button>
+                    <button class="btn btn-secondary" id="back-to-list">
+                        <i class="fas fa-list"></i> Retour à la liste
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="img/logo16.jpg" alt="Med Education" class="footer-logo">
+                <p class="footer-description">
+                    Med Education est la plateforme leader d'apprentissage en médecine, offrant des ressources pédagogiques de qualité pour les étudiants et professionnels de santé.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-title">Liens Rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+                    <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Nos Cours</a></li>
+                    <li><a href="exmens.html"><i class="fas fa-chevron-right"></i> Examens Blancs</a></li>
+                    <li><a href="qcm.html"><i class="fas fa-chevron-right"></i> QCM Interactifs</a></li>
+                    <li><a href="about.html"><i class="fas fa-chevron-right"></i> À Propos</a></li>
+                    <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    <li><a href="login.html"><i class="fas fa-chevron-right"></i> Connexion</a></li>
+                    <li><a href="register.html"><i class="fas fa-chevron-right"></i> Inscription</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-title">Nos Spécialités</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Médecine Générale</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Chirurgie Dentaire</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Pharmacie</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Pédiatrie</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Cardiologie</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-title">Contactez-nous</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Hai Sabah - Oran - Algérie</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+213  779 351 179</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>Mededucation31@gamil.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Lun-Ven: 9h-18h</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2025 Med Education. Tous droits réservés.</p>
+                <div class="legal-links">
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Download QCM Function
+        function downloadQCM(code) {
+            const qcmLinks = {
+                // Medicine QCM - All Years
+                'MED_YEAR1': 'https://fmed.univ-tlemcen.dz/graduation-medecine',
+                'MED_YEAR2': 'https://fmed.univ-tlemcen.dz/graduation-medecine',
+                'MED_YEAR3': 'https://fmed.univ-tlemcen.dz/graduation-medecine',
+                'MED_YEAR4': 'https://fmed.univ-tlemcen.dz/graduation-medecine',
+                'MED_YEAR5': 'https://fmed.univ-tlemcen.dz/graduation-medecine',
+                'MED_YEAR6': 'https://fmed.univ-tlemcen.dz/graduation-medecine',
+                
+                // Dentistry QCM - All Years
+                'DENT_YEAR1': 'https://fmed.univ-tlemcen.dz/graduation-medecine-dentaire',
+                'DENT_YEAR2': 'https://fmed.univ-tlemcen.dz/graduation-medecine-dentaire',
+                'DENT_YEAR3': 'https://fmed.univ-tlemcen.dz/graduation-medecine-dentaire',
+                'DENT_YEAR4': 'https://fmed.univ-tlemcen.dz/graduation-medecine-dentaire',
+                'DENT_YEAR5': 'https://fmed.univ-tlemcen.dz/graduation-medecine-dentaire',
+                
+                // Pharmacy QCM - All Years
+                'PHARM_YEAR1': 'https://fmed.univ-tlemcen.dz/graduation-pharmacie',
+                'PHARM_YEAR2': 'https://fmed.univ-tlemcen.dz/graduation-pharmacie',
+                'PHARM_YEAR3': 'https://fmed.univ-tlemcen.dz/graduation-pharmacie',
+                'PHARM_YEAR4': 'https://fmed.univ-tlemcen.dz/graduation-pharmacie',
+                'PHARM_YEAR5': 'https://fmed.univ-tlemcen.dz/graduation-pharmacie'
+            };
+
+            const link = qcmLinks[code];
+            if (link) {
+                window.open(link, '_blank');
+                showQCMNotification('📚 Redirection vers les QCM...', 'success');
+            } else {
+                showQCMNotification('❌ QCM non disponible', 'error');
+            }
+        }
+
+        function showQCMNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${type === 'success' ? '#667eea' : '#f44336'};
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 10000;
+                font-weight: 500;
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Back to top button functionality
+        const backToTopBtn = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (backToTopBtn) {
+                if (window.scrollY > 300) {
+                    backToTopBtn.classList.add('show');
+                } else {
+                    backToTopBtn.classList.remove('show');
+                }
+            }
+        });
+
+        if (backToTopBtn) {
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.specialty-content');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons and contents
+                    tabBtns.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active-tab'));
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    // Show corresponding content
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active-tab');
+                });
+            });
+
+            // Accordion functionality
+            const yearHeaders = document.querySelectorAll('.year-header');
+            yearHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('i');
+                    
+                    // Toggle content
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    <script src="qcm-script.js"></script>
+</body>
+</html>
